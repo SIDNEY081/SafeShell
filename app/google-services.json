@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "774426091617",
+    "project_id": "safeshell-f3b42",
+    "storage_bucket": "safeshell-f3b42.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774426091617:android:0736dac8b5a77243f4ca20",
+        "android_client_info": {
+          "package_name": "com.sidney081.SafeShell"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2TRDbdYYG6G9vJIMHj_uof8QoB2xiNb0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
