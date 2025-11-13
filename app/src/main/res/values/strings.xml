@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">SafeShell</string>
+    <string name="welcome_message">Welcome to SafeShell!</string>
+    <string name="logout">Logout</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="no_account">Don\'t have an account? Register</string>
+    <string name="have_account">Already have an account? Login</string>
 </resources>

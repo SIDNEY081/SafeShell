@@ -1,15 +1,27 @@
-package com.sidney081.safeshell
+package com.sidney081.SafeShell
 
+import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
-import androidx.activity.ComponentActivity
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity  // CHANGED
+import com.google.firebase.auth.FirebaseAuth
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val tv = TextView(this)
-        tv.text = "Welcome to SafeShell!"
-        tv.textSize = 24f
-        setContentView(tv)
+        setContentView(R.layout.activity_main)
+
+        auth = FirebaseAuth.getInstance()
+
+        val logoutBtn = findViewById<Button>(R.id.logoutButton)
+
+        logoutBtn.setOnClickListener {
+            auth.signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
     }
 }

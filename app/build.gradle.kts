@@ -5,18 +5,27 @@ plugins {
 }
 
 android {
-    namespace = "com.sidney081.safeshell"
-    compileSdk = 33
+    namespace = "com.sidney081.SafeShell"
+    compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.sidney081.safeshell"
-        minSdk = 21
-        targetSdk = 33
+        applicationId = "com.sidney081.SafeShell"
+        minSdk = 26
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildToolsVersion = "33.0.2" // must match your installed SDK Build Tools
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
@@ -26,22 +35,26 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-
-    buildFeatures {
-        viewBinding = true
-    }
 }
 
 dependencies {
-    // Kotlin
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.10")
-
-    // AndroidX
     implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4") // use 2.1.4, latest stable
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.9.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.activity:activity-ktx:1.7.2")
+    implementation("androidx.fragment:fragment-ktx:1.6.1")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation("androidx.transition:transition:1.4.1")
+    implementation("androidx.annotation:annotation-experimental:1.4.0")
+    implementation("androidx.biometric:biometric:1.1.0")
 
-    // Firebase Auth
-    implementation("com.google.firebase:firebase-auth-ktx:22.1.1") // use latest available
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
+
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
