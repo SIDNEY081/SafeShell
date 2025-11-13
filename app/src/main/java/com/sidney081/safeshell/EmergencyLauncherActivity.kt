@@ -38,7 +38,7 @@ class EmergencyLauncherActivity : AppCompatActivity() {
         // Show emergency message
         Toast.makeText(this, "🔒 Emergency Mode Active", Toast.LENGTH_LONG).show()
 
-        // You can add emergency contacts, fake screens, etc.
+        //  emergency contacts, fake screens, etc.
     }
 
     private fun loadSafeApps() {

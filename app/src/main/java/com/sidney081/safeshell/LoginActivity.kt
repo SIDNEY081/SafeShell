@@ -12,6 +12,7 @@ import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import java.util.concurrent.Executor
+import com.sidney081.SafeShell.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 

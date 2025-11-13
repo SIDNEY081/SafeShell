@@ -50,9 +50,24 @@ dependencies {
     implementation("androidx.annotation:annotation-experimental:1.4.0")
     implementation("androidx.biometric:biometric:1.1.0")
 
+    // Firebase BOM and services
     implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-auth-ktx")
+
+    // 🔥  Firebase Remote Config for dynamic features
+    implementation("com.google.firebase:firebase-config-ktx")
+
+    // 🔥  Coroutines for async operations
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // 🔥  Networking for API calls (optional, for advanced feature management)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    // 🔥 Play Feature Delivery for dynamic modules
+    implementation("com.google.android.play:feature-delivery:2.1.0")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

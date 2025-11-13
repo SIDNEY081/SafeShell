@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -6,6 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="red">#FFFF4444</color>
-    <color name="gray">#FF757575</color>
+    <color name="gray">#FF9E9E9E</color>
+    <color name="red_light">#FFFFCDD2</color>
+    <color name="red">#FF0000</color>
+    <color name="red_dark">#FF0000</color>
+    <color name="background_red">#FFFF5252</color>
+    <color name="sos_red">#FFFF1744</color>
+
 </resources>
